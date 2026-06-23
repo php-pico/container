@@ -77,6 +77,7 @@ final readonly class SimpleContainer implements ContainerInterface
             static $service;
 
             if (!$service) {
+                // @mago-expect analysis:mixed-assignment
                 $service = $callable();
             }
 
